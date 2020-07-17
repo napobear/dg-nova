@@ -1,3 +1,5 @@
+	.TITL	BOOT
+	.LOC	0
 BEG:	IORST		;Reset all IO
 	READS	0
 	LDA	1,C77	;Get device mask (000077)
@@ -36,3 +38,4 @@ OP3:	060477		;Yes, read in AC0; (DIAS 0,0) - 1
 	MOVS	1,1	;Yes, swap them
 	JMP	0,3	;Return with full word
 	0		;Padding
+	.END	BEG

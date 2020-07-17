@@ -21,6 +21,8 @@
 ;load the bootstrap beginning at a location whose address is 20 8 less than
 ;the largest address.
 
+	.TITL	BOOTTTI
+	.LOC	07757
 GET:	SUBO	1,1	;Clear AC1, Carry
 	SKPDN	TTI
 	JMP	.-1	;Wait for done
@@ -37,3 +39,4 @@ BSTRP:	NIOS	TTI	;Enter here, start reader
 	JSR	GET	;Get another word
 			;This will contain an STA (first STA 1,.+1)
 			;This will contain JMP .-4
+	.END	GET
